@@ -1,0 +1,6 @@
+/* ? Tailwind scans css, finds this and replaces it with TW base styles, componenets, and utility styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+/* ? Check npm build script for command used and where the TW output is sent */
