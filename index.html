@@ -10,30 +10,72 @@
 
 </head>
 
-<body class="bg-gray-200">
+<!-- ? Responsive Tailwind Design -->
+<!-- * sm: at small screen breakpoint apply chosen css -->
+<!-- ? All TW breakpoints are min-width, so start small then add larger  -->
 
-    <div class="px-8 py-12">
+<body class="bg-gray-800">
 
-        <img class="h-10" src="public/img/logo.svg" alt="logo">
-        <img class="mt-6 rounded-lg shadow-xl" src="public/img/beach-work.jpg" alt="Lady Chair">
-        <h1 class="mt6 text-2xl font-bold text-gray-800 leading-tight">
-            You can work from anywhere,
-            <span class="text-indigo-400">take advantage of it</span> </h1>
 
-        <p class="mt-2 text-gray-600">
-            Workcation helps you find work-friendly rentals in beautiful
-            locations so you can enjoy some nice weather even when you're not on vacation.
-        </p>
+    <div class="flex bg-gray-200">
 
-        <div class="mt-4">
+        <!-- Card -->
+        <!-- ? @large screens it takes half the space of container and then make it take full width so it's easier todivide with other container  -->
+        <div class="px-8 py-12 mx-auto max-w-md 
+        sm:max-w-xl 
+        lg:w-1/2 lg:max-w-full lg:py-24 lg:px-12 ">
 
-            <!-- Link inline-block so it accpets padding better -->
-            <!-- tracking is letterspace -->
-            <a href="#" class="inline-block px-5 py-3 rounded-lg shadow-lg bg-indigo-500 text-sm text-white uppercase tracking-wider font-semibold"> Book your escape </a>
+        
+
+            <img class="h-10" src="public/img/logo.svg" alt="logo">
+
+            <!-- ? Make image take full width and use cover to make image cover available space in container w/o distorting -->
+            <!-- ? Learn more about object utility class -->
+            <img class="mt-6 rounded-lg shadow-xl 
+            sm:mt-8 sm:h-64 sm:w-full sm:object-cover sm:object-center 
+            lg:hidden " src="public/img/beach-work.jpg" alt="Lady Chair">
+
+            <h1 class="mt-6 text-2xl font-bold text-gray-800 leading-tight sm:mt-8 sm:text-4xl
+            lg:text-3xl
+            ">
+                You can work from anywhere.
+                <span class="text-indigo-400">Take advantage of it</span>
+            </h1>
+
+            <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl ">
+                Workcation helps you find work-friendly rentals in beautiful
+                locations so you can enjoy some nice weather even when you're not on vacation.
+            </p>
+
+            <div class="mt-4 sm:mt-6">
+
+                <!-- Make Link inline-block so it accpets padding better -->
+                <!-- tracking is letterspace -->
+                <a href="#"
+                    class="inline-block px-5 py-3 rounded-lg shadow-lg bg-indigo-500 text-sm text-white uppercase tracking-wider font-semibold sm:text-base">
+                    Book your escape
+                </a>
+
+            </div>
 
         </div>
 
+        <!-- Start hidden, at breakpoint bring it back  -->
+        <!-- This div is half the width of parent, so make image take u all space in the div to match sibling  -->
+        <div style="border:1px solid blue;" class="hidden lg:block lg:w-1/2 lg:relative c">
+
+            <!--? inset-0 is same as setting absolute positoin top right left and bottom all to 0 -->
+                <img class="absolute inset-0 h-full w-full object-cover object-center" src="public/img/beach-work.jpg" alt="Lady Chair">
+
+
+        </div>
+
+
+
+
+
     </div>
+
 
 </body>
 
